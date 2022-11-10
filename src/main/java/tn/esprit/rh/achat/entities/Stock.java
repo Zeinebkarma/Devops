@@ -36,5 +36,8 @@ public class Stock implements Serializable {
 		this.qte = qte;
 		this.qteMin = qteMin;
 	}
+	public Stock(long l, String string, int i, int j) {
+		// TODO Auto-generated constructor stub
+	}
 
 }
