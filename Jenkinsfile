@@ -19,6 +19,11 @@
                  sh 'mvn compile'
             }
         }
+	    stage ('MVN SONAR') {
+		    steps {
+			    sh 'mvn sonar:sonar -D sonar.login=admin -D sonar.password=sonar'
+		    }
+	    }
                
         }
          
