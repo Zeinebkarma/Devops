@@ -27,7 +27,7 @@
 	    stage ('Build docker image'){
 	    steps{
 		    script{
-			    sh'docker build -t mogaadions/achat.'
+			    sh'docker build -t mogaadions/achat .'
 		    }
 	    }
 	    }
