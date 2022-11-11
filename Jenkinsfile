@@ -32,7 +32,6 @@ pipeline {
 		
                 sh "./mvnw test"  
 		    
-                junit '**/target/surefire-reports/TEST-*.xml'
             } 
            
         }
