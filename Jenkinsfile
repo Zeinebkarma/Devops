@@ -29,7 +29,11 @@ pipeline {
 
   stage('Test') {
             steps {
-                sh "./mvnw test"		    
+                sh "./mvnw test"	
+		            junit '**/target/surefire-reports/TEST-*.xml'
+           jacoco execPattern: 'target/jacoco.exec'
+
+
             } 
         }
 	    
