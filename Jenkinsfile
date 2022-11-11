@@ -30,11 +30,23 @@ pipeline {
   stage('Test') {
             steps {
 		
-                sh "./mvnw test"  
+                sh "./mvnw test"
+                junit '**/target/surefire-reports/TEST-*.xml'
+           jacoco execPattern: 'target/jacoco.exec'
+
 		    
             } 
            
         }
+	    
+	       stage("Send Mail") {
+           steps {
+          script {
+          mail bcc: '', body: '''Hello User the build of your project succeeded.
+            Jenkins.''', cc: '', from: '', replyTo: '', subject: 'Build successful', to: 'oussema.belaid@esprit.tn'
+	  }
+           }
+        } 
         
         
            
@@ -88,13 +100,6 @@ stage("Publish to Nexus Repository Manager") {
                 }
             }
 }
-	    stage("Send Mail") {
-           steps {
-          script {
-          mail bcc: '', body: '''Hello User the build of your project succeeded.
-            Jenkins.''', cc: '', from: '', replyTo: '', subject: 'Build successful', to: 'oussema.belaid@esprit.tn'
-	  }
-           }
-        } 
+	  
 	    }   
 }
