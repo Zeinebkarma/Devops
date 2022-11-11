@@ -46,6 +46,7 @@ pipeline {
               sh """./mvnw sonar:sonar \
   -Dsonar.projectKey=project-jenkins-pipeline \
   -Dsonar.host.url=localhost:9000 \
+        -Dsonar.coverage.jacoco.xmlReportPaths=../app-it/target/site/jacoco-aggregate/jacoco.xml """ 
     
                
        }
