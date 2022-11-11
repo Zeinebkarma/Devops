@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Pulling...';
                   git branch: 'feature_SA',
-                  url : 'https://github.com/Zeinebkarma/Devops.git',
+                  url : 'https://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@github.com/Zeinebkarma/Devops.git',
                   credentialsId: 'githubtoken';
             }
         }
