@@ -36,14 +36,7 @@ pipeline {
             } 
         }
 	    
-	       stage("Send Mail") {
-           steps {
-          script {
-          mail bcc: '', body: '''Hello User the build of your project succeeded.
-            Jenkins.''', cc: '', from: '', replyTo: '', subject: 'Build successful', to: 'oussema.belaid@esprit.tn'
-	  }
-           }
-        } 
+	
         
         
            
