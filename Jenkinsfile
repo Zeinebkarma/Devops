@@ -33,7 +33,7 @@
 	    }
 	    stage ('DockerHub Push'){
 	    steps{
-		    script{
+		    steps{
 			    sh '''docker login -u mogaadions -p ${DockerHubPassword} 
 				docker push mogaadions/achat"
 		    }
