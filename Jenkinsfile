@@ -14,9 +14,9 @@
                  sh 'mvn clean'
             }
         }
-        stage('MVN Compile') { 
+        stage('BUILD') { 
             steps {
-                 sh 'mvn compile'
+                 sh 'mvn -B -DskipTests clean package';
             }
         }
 	    stage ('MVN SONAR') {
