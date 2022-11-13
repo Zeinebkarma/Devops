@@ -24,13 +24,7 @@
 			    sh 'mvn sonar:sonar -D sonar.login=admin -D sonar.password=sonar'
 		    }
 	    }
-	    stage ('Build docker image'){
-	    steps{
-		    script{
-			    sh'docker build -t mogaadions/achat .'
-		    }
-	    }
-	    }
+	    
 		    
                
         }
