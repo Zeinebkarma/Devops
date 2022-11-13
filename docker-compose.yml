@@ -12,7 +12,7 @@ services:
            test: ["CMD","mysqladmin","ping","-h","localhost"]
            timeout: 20s
            retries: 10
-    restart: always
+    restart: on-failure
   backend:
     image: 'oussemabelaid7/devops:latest'
     ports:
