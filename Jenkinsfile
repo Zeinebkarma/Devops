@@ -103,7 +103,7 @@ stage("Publish to Nexus Repository Manager") {
 		    steps{
 			    withDockerRegistry([credentialsId: "docker-cred", url: ""]) {
  		            //sh 'printenv'
-			    sh "docker build -t slowwsloth/zied_cicd_back:$BUILD_NUMBER ."
+			    sh "docker build -t oussemabelaid7/devops:latest ."
 			    
 		    }
 		    }
@@ -111,7 +111,7 @@ stage("Publish to Nexus Repository Manager") {
 	        stage('Push new image') {
 			steps{
 		withDockerRegistry([credentialsId: "docker-cred", url: ""]) {
-  		sh "docker push slowwsloth/zied_cicd_back:$BUILD_NUMBER"
+  		sh "docker push oussemabelaid7/devops:latest"
 	}
 			}
 		}
