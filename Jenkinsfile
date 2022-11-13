@@ -31,6 +31,14 @@
 		    }
 	    }
 	    }
+	    stage ('DockerHub Push'){
+	    steps{
+		    script{
+			    sh '''docker login -u mogaadions -p ${DockerHubPassword} 
+				docker push mogaadions/achat"
+		    }
+	    }
+	    }
 		    
                
         }
