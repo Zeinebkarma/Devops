@@ -26,19 +26,10 @@
 	    }
 	    stage ('Build docker image'){
 	    steps{
-		    script{
 			    sh'docker build -t mogaadions/achat .'
-		    }
 	    }
 	    }
-	    stage ('DockerHub Push'){
-	    steps{
-		    steps{
-			    sh '''docker login -u mogaadions -p ${DockerHubPassword} 
-				docker push mogaadions/achat"
-		    }
-	    }
-	    }
+	   
 		    
                
         }
