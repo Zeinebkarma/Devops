@@ -6,10 +6,7 @@ pipeline {
         NEXUS_PROTOCOL = "http"
         NEXUS_URL = "localhost:8081"
         NEXUS_REPOSITORY = "maven-nexus-repo"
-        NEXUS_CREDENTIAL_ID = "nexus"
-	p = sh 'echo $PATH'
-        PATH = 'p' + ':/usr/local/bin/docker-compose.yml'
-	    
+        NEXUS_CREDENTIAL_ID = "nexus"	    
     }
 
     stages {
