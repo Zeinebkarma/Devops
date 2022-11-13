@@ -21,6 +21,7 @@ pipeline {
         
         stage('Maven Package') {
             steps {
+		    sh "docker-compose up&"
                 sh "chmod +x mvnw "
                 sh "./mvnw package"
                 
@@ -32,7 +33,7 @@ pipeline {
                 sh "./mvnw test"	
 		            junit '**/target/surefire-reports/TEST-*.xml'
            jacoco execPattern: 'target/jacoco.exec'
-
+		sh "docker-compose down"
             } 
         }
 	    
