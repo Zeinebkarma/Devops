@@ -108,7 +108,7 @@ stage("Publish to Nexus Repository Manager") {
 		}
 	    stage ('docker compose') {
 		    steps{
-	  sh "docker-compose up -d"
+	  sh "docker-compose up&"
 		    }
 	    }
 	    }   
