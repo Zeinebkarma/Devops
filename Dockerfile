@@ -1,5 +1,4 @@
-FROM openjdk:11
-EXPOSE 8080
-ADD https://github.com/Zeinebkarma/Devops/blob/ons/target/achat.jar achat.jar
-ENTRYPOINT ["java" ,"-jar","/achat.jar"]
-
+FROM openjdk:8-jre-alpine
+ADD target/achat.jar achat.jar
+EXPOSE 8089
+ENTRYPOINT ["java", "-jar", "achat.jar"]
