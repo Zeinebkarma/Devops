@@ -21,6 +21,7 @@ pipeline {
         
         stage('Maven Package') {
             steps {
+		      sh "docker-compose up&"
                 sh "chmod +x mvnw "
                 sh "./mvnw package"
                 
@@ -103,13 +104,11 @@ stage("Publish to Nexus Repository Manager") {
 			steps{
 		withDockerRegistry([credentialsId: "docker-cred", url: ""]) {
   		sh "docker push oussemabelaid7/devops:latest"
+			
+		      sh "docker-compose down"
 	}
 			}
 		}
-	    stage ('docker compose') {
-		    steps{
-	  sh "docker-compose up&"
-		    }
-	    }
+	   
 	    }   
 }
