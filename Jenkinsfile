@@ -14,7 +14,7 @@ pipeline{
                 //git 'https://github.com/Zeinebkarma/Devops
 
                 git branch: 'zeinebkarma', 
-                url: 'https://github.com/Zeinebkarma/Devops/tree/zeinebkarma'
+                url: 'https://github.com/Zeinebkarma/Devops'
 
                  
 		        
