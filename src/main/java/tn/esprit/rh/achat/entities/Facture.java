@@ -30,7 +30,6 @@ public class Facture implements Serializable {
 	private Long idFacture;
 	private float montantRemise;
 	private float montantFacture;
-	private long zeineb;
 	@Temporal(TemporalType.DATE)
 	private Date dateCreationFacture;
 	@Temporal(TemporalType.DATE)
