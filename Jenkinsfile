@@ -18,7 +18,7 @@
             steps {
                  sh 'mvn -B -DskipTests clean package';
             }
-        }
+        }/*
 	    stage ('MVN SONAR') {
 		    steps {
 			    sh 'mvn sonar:sonar -D sonar.login=admin -D sonar.password=sonar'
@@ -40,16 +40,11 @@
 		    steps{
 			    sh 'mvn clean deploy -DskipTests'
 		    }
-	    }
+	    }*/
 	    stage ("JUNIT / MOCKITO") {
 	    	steps {
 			sh 'mvn test'
 		}
 	    }
-	    stage("Swagger") {
-			 steps {
-				sh 'docker run -d --name achatapp -p 8089:8089 mogaadions/achat'
-			}
-		}
     }
  }
