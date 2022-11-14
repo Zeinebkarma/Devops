@@ -13,7 +13,7 @@
             steps {
                  sh 'mvn clean'
             }
-        }/*
+        }
         stage('BUILD') { 
             steps {
                  sh 'mvn -B -DskipTests clean package';
@@ -40,16 +40,16 @@
 		    steps{
 			    sh 'mvn clean deploy -DskipTests'
 		    }
-	    }*/
-	    stage("DockerCompose") {
-			 steps {
-				sh 'docker-compose up -d'
-			}
-		}
+	    }
 	    stage ("JUNIT / MOCKITO") {
 	    	steps {
 			sh 'mvn test'
 		}
-	    }	
+	    }
+	    stage("Swagger") {
+			 steps {
+				sh 'docker run -d --name achatapp -p 8089:8089 mogaadions/achat'
+			}
+		}
     }
  }
