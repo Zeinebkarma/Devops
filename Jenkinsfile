@@ -66,7 +66,7 @@ pipeline{
 
 			steps {
 
-			sh'docker login -u <Zeinebkarma> -p <Docker2022>	
+			sh'docker login -u <Zeinebkarma> -p <Docker2022>'	
 			}
 		}
 
