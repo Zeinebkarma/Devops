@@ -8,8 +8,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 'devops'
       MYSQL_DATABASE: 'achatdb'
-      MYSQL_USER: 'root'
-      MYSQL_PASSWORD: 'root'
+      MYSQL_USER: 'devops'
+      MYSQL_PASSWORD: 'devops'
       MYSQL_ROOT_HOST: '%'
     ports:
       - 3306:3306
