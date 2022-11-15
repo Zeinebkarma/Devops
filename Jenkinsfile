@@ -48,18 +48,18 @@ pipeline{
                 echo 'mvn test'
             }
         }
-        /*
+        
         stage ('Maven Deploy Nexus') {
             steps {
                 sh'mvn clean deploy -Dmaven.test.skip=true -Dresume=false'
             }
         }
-*/
+
 
 		stage('Build image') {
 
 			steps {
-				sh 'docker build -t Zeinebkarma/achat:latest .'
+				sh 'docker build -t Zeinebkarma/achat:latest'
 			}
 		}
 
@@ -74,7 +74,7 @@ pipeline{
 		stage('Push image') {
 
 			steps {
-				sh 'docker push oussemakessentini/achat:latest'
+				sh 'docker push Zeinebkarma/achat:latest'
 			}
 		}
 		
