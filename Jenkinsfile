@@ -58,7 +58,7 @@ pipeline{
 		stage('Build image') {
 
 			steps {
-				sh 'docker build -t oussemakessentini/achat:latest .'
+				sh 'docker build -t Zeinebkarma/achat:latest .'
 			}
 		}
 
@@ -66,7 +66,7 @@ pipeline{
 
 			steps {
 
-			sh'docker login -u <Zeinebkarma> -p <Docker2022>'	
+			sh'docker login -u Zeinebkarma -p Docker2022'	
 			}
 		}
 
