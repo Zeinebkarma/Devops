@@ -59,7 +59,7 @@ pipeline{
 		stage('Build image') {
 
 			steps {
-				sh 'docker build -t Zeinebkarma/achat:latest'
+				sh 'docker build -t Zeinebkarma/achat:latest.'
 			}
 		}
 
@@ -74,7 +74,7 @@ pipeline{
 		stage('Push image') {
 
 			steps {
-				sh 'docker push Zeinebkarma/achat:latest'
+				sh 'docker push Zeinebkarma/achat:latest.'
 			}
 		}
 		
