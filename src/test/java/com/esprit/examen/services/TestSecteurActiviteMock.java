@@ -48,7 +48,7 @@ import com.esprit.examen.repositories.SecteurActiviteRepository;
 		}
 	};
 	
-	@DisplayName("Retrieving all activity sectors")
+	@DisplayName("Retrieving all activity sectors test")
 	@Test
 	 void GetActSectTest() {
 	List<SecteurActivite> lst = new ArrayList<>();		
@@ -62,7 +62,7 @@ import com.esprit.examen.repositories.SecteurActiviteRepository;
 	
 	}
 	
-	@DisplayName("Adding activity sectors...!")
+	@DisplayName("Testing adding activity sectors")
 	@Test
 	 void AddActSectTest() {
 		
@@ -74,7 +74,7 @@ import com.esprit.examen.repositories.SecteurActiviteRepository;
 	}
 	
 	
-	@DisplayName("Deleting activity sector...!")
+	@DisplayName("testing addition activity sector")
 	@Test
 	  void DeleteTest() {
 		SecteurActivite sa = new SecteurActivite();
@@ -87,7 +87,7 @@ import com.esprit.examen.repositories.SecteurActiviteRepository;
 		verify(sar).deleteById(said);
 	}
 	
-	@DisplayName("updating activity sector...!")
+	@DisplayName("updating activity sector test")
 	@Test
 	 void EditSecteurActivite_ifFound() {
 		SecteurActivite sa_edit = new SecteurActivite();
@@ -103,7 +103,7 @@ import com.esprit.examen.repositories.SecteurActiviteRepository;
 	
 	
 
-	@DisplayName("retrieving activity sector by ID...!")
+	@DisplayName("retrieving activity sector by identifier")
 	@Test
 	void retrieveSecteurActitiviteById() {
 
